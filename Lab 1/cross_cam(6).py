@@ -1,6 +1,6 @@
 import cv2
 
-def drawRedCrossFromCamera():
+def crossOnCamera():
     # для винды
     cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
     # для макоси
@@ -26,4 +26,4 @@ def drawRedCrossFromCamera():
     cap.release()
     cv2.destroyAllWindows()
 
-drawRedCrossFromCamera()
+crossOnCamera()
