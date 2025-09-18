@@ -1,7 +1,10 @@
 import cv2
 
 def drawRedCrossFromCamera():
+    # для винды
     cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+    # для макоси
+    # cap = cv2.VideoCapture(0, cv2.CAP_AVFOUNDATION)
 
     while True:
         ret, frame = cap.read()
