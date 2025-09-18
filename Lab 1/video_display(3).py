@@ -18,4 +18,4 @@ def show(filename):
         
     cv2.destroyAllWindows()
 
-show('/Users/asyachz/DigitalMultimediaProcessingAlgorithms/Lab 1/src/video.mp4')
+show('Lab 1/src/video.mp4')
