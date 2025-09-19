@@ -24,13 +24,17 @@ def crossOnCamera():
         h, w, _ = frame.shape
         center_x = w // 2
         center_y = h // 2
-
-        center_pixel = frame[center_y, center_x]
-        cross_color = detectColor(center_pixel)
-
-        cv2.line(frame, (center_x - 50, center_y), (center_x + 50, center_y), cross_color, 4)
-        cv2.line(frame, (center_x, center_y - 50), (center_x, center_y + 50), cross_color, 4)
-
+        x1 = center_x - 150
+        y1 = center_y - 30
+        x2 = center_x + 150
+        y2 = center_y + 30
+        cv2.rectangle(frame, (x1, y1), (x2, y2), detectColor(frame[center_y, center_x]), 4)
+        x1 = center_x - 30
+        y1 = center_y - 150
+        x2 = center_x + 30
+        y2 = center_y + 150
+        cv2.rectangle(frame, (x1, y1), (x2, y2), detectColor(frame[center_y, center_x]), 4)
+        
         cv2.imshow("frame", frame)
 
         if cv2.waitKey(1) & 0xFF == 27:
