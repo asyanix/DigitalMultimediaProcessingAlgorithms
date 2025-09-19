@@ -1,17 +1,16 @@
 import cv2
 
-cap = cv2.VideoCapture(1, cv2.CAP_AVFOUNDATION)
-
+url = "http://172.20.10.4:8080/video"
+cap = cv2.VideoCapture(url)
+    
 while True:
-    ret, frame = cap.read()
-    if not ret:
-        print("Нет кадра")
+    ok, frame = cap.read()
+    if not ok:
         break
-
+    
     cv2.imshow("frame", frame)
-
     if cv2.waitKey(1) & 0xFF == 27:
         break
-
+    
 cap.release()
 cv2.destroyAllWindows()
