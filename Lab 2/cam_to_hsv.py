@@ -7,7 +7,7 @@ def convert_to_hsv(frame):
 
 def process_converting(frame):
     hsv_frame = convert_to_hsv(frame)
-    cv2.imshow("HSV", hsv_frame) 
+    cv2.imshow("frame", hsv_frame) 
     return hsv_frame
 
 
