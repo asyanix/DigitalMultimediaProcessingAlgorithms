@@ -6,16 +6,16 @@ trackers = {
     'kcf': cv2.TrackerKCF.create,
     'mosse': cv2.legacy.TrackerMOSSE.create,
 
-    'our_mosse': mosse.Mosse  # реализация алгоритма MOSSE
+    'our_mosse': mosse.Mosse
 }
 
-videos = ['bee', 'paraglider', 'car', 'scateboard', 'orange']
+videos = ['bee', 'paraglider', 'car', 'scateboard', 'orange', 'guy']
 
 # Настройки
-name = videos[4]
+name = videos[5]
 path = f'IZ1/src/{name}.mp4'
-tracker_selection = 'our_mosse'
-reset_tracker_on_fail = False
+tracker_selection = 'csrt'
+reset_tracker_on_fail = True
 write_video = True
 window_name = 'Tracking'
 window_size = (1024, 576)
