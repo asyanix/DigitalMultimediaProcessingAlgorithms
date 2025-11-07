@@ -38,7 +38,7 @@ def process_image(image_path):
         return
 
     gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
-    blurred = cv.GaussianBlur(gray, (5, 5), 1)
+    blurred = cv.GaussianBlur(gray, (5, 5), 2)
 
     sobel_kernel_x = np.array([
         [-1, 0, 1],
@@ -80,5 +80,5 @@ def process_image(image_path):
 
     return magnitude, quantized_angle
 
-mg, qa = process_image("Lab4/src/input.jpg")
+mg, qa = process_image("Lab4/src/input2.jpg")
 print(f"МАТРИЦА ДЛИН ГРАДИЕНТОВ:\n{mg}\nМАТРИЦА УГЛОВ ГРАДИЕНТОВ:\n{qa}")

@@ -38,7 +38,7 @@ def process_image(image_path):
         return
 
     gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
-    blurred = cv.GaussianBlur(gray, (5, 5), 2)
+    blurred = cv.GaussianBlur(gray, (3, 3), 1)
 
     sobel_kernel_x = np.array([
         [-1, 0, 1],

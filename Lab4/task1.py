@@ -9,7 +9,7 @@ def process_image(image_path):
         return
 
     gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
-    blurred = cv.GaussianBlur(gray, (5, 5), 1)
+    blurred = cv.GaussianBlur(gray, (7, 7), 2)
 
     cv.imshow("Original image", image)
     cv.imshow("Gray Image", blurred)
@@ -17,4 +17,4 @@ def process_image(image_path):
     cv.waitKey(0)
     cv.destroyAllWindows()
 
-process_image("Lab4/src/input.jpg")
+process_image("Lab4/src/input2.jpg")
