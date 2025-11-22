@@ -88,4 +88,4 @@ def noise_reduction(input_file, output_file, frame_size=2048, overlap=0.5, noise
     sf.write(output_file, output_signal, sample_rate)
 
 
-noise_reduction('Lab 5/oleg.wav', 'Lab 5/output.wav')
+noise_reduction('Lab 5/src/oleg.wav', 'Lab 5/src/output.wav')
